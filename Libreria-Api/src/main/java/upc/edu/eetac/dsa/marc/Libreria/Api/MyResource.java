@@ -1,4 +1,4 @@
-package upc.edu.eetac.dsa.piskitus.Libreria.Api;
+package upc.edu.eetac.dsa.marc.Libreria.Api;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

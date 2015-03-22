@@ -1,4 +1,4 @@
-package upc.edu.eetac.dsa.piskitus.Libreria.Api;
+package upc.edu.eetac.dsa.marc.Libreria.Api;
 
 import org.glassfish.jersey.linking.DeclarativeLinkingFeature;
 import org.glassfish.jersey.server.ResourceConfig;

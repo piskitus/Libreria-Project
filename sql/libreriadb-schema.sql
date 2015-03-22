@@ -24,7 +24,6 @@ create table authors (
 create table books (
 	bookID				int not null auto_increment primary key,
 	title	 			varchar(100) not null,
-	author	 			varchar(80) not null,
 	language			varchar(100) not null,
 	edition				varchar(100) not null,
 	editionDate			varchar(100) not null,
