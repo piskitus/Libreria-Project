@@ -39,13 +39,13 @@ import upc.edu.eetac.dsa.marc.Libreria.Api.model.BooksCollection;
 public class BookResource {
 	private DataSource ds = DataSourceSPA.getInstance().getDataSource();
 
-	private String GET_BOOKS_QUERY = "select * from books where bookid > ifnull(?, 1) order by bookid asc limit ?";
-	private String GET_BOOKS_QUERY_FROM_LAST = "select * from books where bookid < ifnull(?, 10) order by bookid desc limit ?";
+	private String GET_BOOKS_QUERY = "select * from books where bookid > ifnull(?, 1) order by bookID asc limit ?";
+	private String GET_BOOKS_QUERY_FROM_LAST = "select * from books where bookID < ifnull(?, 10) order by bookID desc limit ?";
 	private String GET_BOOK_BY_TITLE = "select * from books where title = ?";
-	private String GET_BOOKS_BY_TITLE = "select * from books where title like ? and bookid > ifnull(?, 1) order by bookid asc limit ?";
-	private String GET_BOOKS_BY_TITLE_FROM_LAST = "select * from books where title like ? and bookid < ifnull(?, 10) order by bookid desc limit ?";
-	private String GET_BOOKS_BY_AUTHOR = "select * from books where author like ? and bookid > ifnull(?, 1) order by bookid asc limit ?";
-	private String GET_BOOKS_BY_AUTHOR_FROM_LAST = "select * from books where author like ? and bookid < ifnull(?, 10) order by bookid desc limit ?";
+	private String GET_BOOKS_BY_TITLE = "select * from books where title like ? and bookID > ifnull(?, 1) order by bookID asc limit ?";
+	private String GET_BOOKS_BY_TITLE_FROM_LAST = "select * from books where title like ? and bookID < ifnull(?, 10) order by bookID desc limit ?";
+	private String GET_BOOKS_BY_AUTHOR = "select * from books where author like ? and bookID > ifnull(?, 1) order by bookID asc limit ?";
+	private String GET_BOOKS_BY_AUTHOR_FROM_LAST = "select * from books where author like ? and bookID < ifnull(?, 10) order by bookID desc limit ?";
 	private String INSERT_BOOK_QUERY = "insert into books values(?, ?, ?, ?, ?, ?, ?)";
 	private String UPDATE_BOOK_QUERY = "update books set title=ifnull(?, title), author=ifnull(?, author), language=ifnull(?, language), edition=ifnull(?, edition), editionDate=ifnull(?, editionDate), printingDate=ifnull(?, printingDate), publisher=ifnull(?, publisher) where title=?";
 	private String DELETE_TITLE_QUERY = "delete from books where title=?";

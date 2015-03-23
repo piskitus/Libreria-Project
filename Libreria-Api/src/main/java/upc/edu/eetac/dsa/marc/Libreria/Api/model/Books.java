@@ -30,6 +30,7 @@ public class Books {
 	private List<Link> links;
 
 	public String getTitle() {
+		
 		return title;
 	}
 
