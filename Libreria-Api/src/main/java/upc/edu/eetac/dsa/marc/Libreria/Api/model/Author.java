@@ -1,5 +1,6 @@
 package upc.edu.eetac.dsa.marc.Libreria.Api.model;
 
+//clase autor. Cada autor tiene su identificador
 public class Author {
 	private String name;
 	private int authorID;

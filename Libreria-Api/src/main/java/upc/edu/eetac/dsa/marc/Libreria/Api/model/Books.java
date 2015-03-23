@@ -1,5 +1,7 @@
 package upc.edu.eetac.dsa.marc.Libreria.Api.model;
 
+
+
 import java.util.List;
 import javax.ws.rs.core.Link;
 import org.glassfish.jersey.linking.Binding;

@@ -58,7 +58,7 @@ public class BookResource {
 	public BooksCollection getBooks(@QueryParam("length") int length,
 			@QueryParam("before") int before, @QueryParam("after") int after,
 			@QueryParam("title") String title,
-			@QueryParam("author") String author) {
+			@QueryParam("author") String author) {//tendría que recojer una lista de autores
 		BooksCollection books = new BooksCollection();
 
 		Connection conn = null;
