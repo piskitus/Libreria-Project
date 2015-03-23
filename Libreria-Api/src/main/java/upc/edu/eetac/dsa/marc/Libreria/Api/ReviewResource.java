@@ -33,12 +33,12 @@ import upc.edu.eetac.dsa.marc.Libreria.Api.model.ReviewsCollection;
 public class ReviewResource {
 	private DataSource ds = DataSourceSPA.getInstance().getDataSource();
 
-	private String INSERT_REVIEW = "insert into reviews (username, name, book, content) values(?, ?, ?, ?)";
-	private String GET_REVIEW_BY_ID = "select * from reviews where reviewid = ?";
-	private String DELETE_REVIEW = "delete from reviews where reviewid=?";
-	private String UPDATE_REVIEW = "update reviews set content=ifnull(?, content) where reviewid=?";
+	private String INSERT_REVIEW = "insert into reviews (username, name, books, content) values(?, ?, ?, ?)";
+	private String GET_REVIEW_BY_ID = "select * from reviews where reviewID = ?";
+	private String DELETE_REVIEW = "delete from reviews where reviewID=?";
+	private String UPDATE_REVIEW = "update reviews set content=ifnull(?, content) where reviewID=?";
 	private String GET_REVIEW_BY_USER = "select * from reviews where username = ? and book = ?";
-	private String GET_REVIEWS_BY_BOOK = "select*from reviews, books where reviews.book=books.bookid and books.title=?";
+	private String GET_REVIEWS_BY_BOOK = "select*from reviews, books where reviews.book=books.bookID and books.title=?";
 
 	// Obtener colección de reviews por libro
 	@GET
@@ -63,11 +63,11 @@ public class ReviewResource {
 			boolean first = true;
 			while (rs.next()) {
 				Reviews review = new Reviews();
-				review.setBook(rs.getInt("bookid"));
+				review.setBook(rs.getInt("bookID"));
 				review.setContent(rs.getString("content"));
 				review.setName(rs.getString("name"));
 				review.setUsername(rs.getString("username"));
-				lastReview = rs.getInt("reviewid");
+				lastReview = rs.getInt("reviewID");
 
 				if (first) {
 					first = false;
